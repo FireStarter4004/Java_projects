@@ -1,0 +1,121 @@
+Blueprint for education.java
+
+By Kyler Brungerwood
+
+program provides a pathway for students to find which education they would like to pursue.
+----------------------------------------------------------------------------------------------------------
+
+Class: SMS 
+
+START
+print "-------------------Sudent Management System-----------------"
+
+create scanner
+
+print " Please enter Students name (enter done to quit!): "
+
+create variable: name
+d1 = 0
+d2 = 0
+
+while (d1 == 0){
+
+    print " Please enter Students first and last name (enter done to quit!): "
+
+    store name
+
+    if (name == "done"){
+        print "Have a good day!"
+        break
+    }
+    while (D2 == 0){
+
+        print """
+        Student Management Menu:
+
+        1. Student information
+        2. GPA information
+        3. Scholarship information
+        4. Finished with Student (returns you to the name entry)
+
+        Please enter your choice: 
+        """
+        int choice = input.nextInt()
+
+        if (choice == 1){
+            print " You have choosen student information"
+            
+            print "Please enter Student's major: " 
+            String major = input.nextLine()
+
+            print "\n Please enter classification"
+            print "(freshman)(Sophmore)(Junior)(Senior)"
+            print "please enter choice: "
+            String class = input.nextLine()
+
+            print " does student live in state or out of state of college?: "
+            print " please enter choice below: "
+            String state = input.nextLine()
+
+            print " Information entered:"
+            print " Student's name: " + name
+            print "Student's major: " + major
+            print "Student's Classification: " + classification
+            print "Student's home: " + state
+        }
+        else if (choice == 2){
+            print " you have choosen GPA information"
+
+            print " please enter GPA"
+            print " enter choice below: " 
+            Double GPA = input.nextDouble()
+
+            if (GPA < 3.0){
+                print " Student's name: " + name
+                Print " Student's GPA is: " + GPA
+                print " Student is not eligible for the honors program" 
+            }
+
+            else if ( GPA >= 3.0){
+                print " Student's name: " + name
+                print " Student's GPA is: " + GPA
+                print " Student is eligible for the honors program"
+            }
+
+            else{
+                print " sorry that is not a valid input"
+            }
+        }
+
+        else if( choice == 3){
+            print " you have choosen Scholarship information"
+
+            print " please enter family's income: "
+
+            Int income = input.nextInt()
+
+            if( income < 40000){
+                print " Student's name: " + name
+                print " this student is eligible for financial aid, grants, and school scholarships!"
+            }
+            else if( income >= 40000 && income <= 60000){
+                print " Student's name: " + name
+                print " this student is eligible for financial aid and grants!"
+            }
+            else if ( income > 60000){
+                print " Student's name: " + name
+                print " this student is eligible for financial aid"
+            }
+            else{
+                print " Sorry that's an invaid input!"
+            }
+        }
+        else if (choice == 4){
+            print " you have choosen finished with student"
+            break
+        }
+        else{
+            print " sorry that's not a vald input!"
+        }
+    }
+}

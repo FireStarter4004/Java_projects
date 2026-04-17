@@ -1,0 +1,350 @@
+Blueprint for education.java
+
+By Kyler Brungerwood
+
+program provides a pathway for students to find which education they would like to pursue.
+----------------------------------------------------------------------------------------------------------
+
+Class:education
+
+START
+print "-----------------Educational path finder --------------------"
+
+create scanner
+
+print "please enter your name"
+
+store name
+
+create space
+
+print "please enter your age"
+
+store age
+
+If(age < 16)
+    print " sorry you're too young!"
+    exit system
+
+clear scanner
+
+print "----------------\n which path interests you?---------------------"
+
+print """
+    1.Trade School
+    2.2 Year college
+    3.4 Year college
+    """
+
+print "please enter your choice!"
+
+store choice
+
+if(choice.equalsIgnoreCase("Trade School")){
+    print "you selected trade school"
+    
+    print "\nplease enter trade of interest"
+
+    print """
+        1.Welding
+        2.HVAC
+        3.Electrician
+        """
+    
+    print "please enter choice"
+
+    store trade
+
+    declare varables
+    WelderChoice = 0
+    HvacChoice = 0
+    ElectChoice = 0
+
+    if(trade.equalsIgnoreCase("welding")){
+        print "welding is a great choice"
+        
+        print """
+            Please choose between (1-2)
+            1.check average salary
+            2.Contact Admissions
+            """
+        
+        print "please enter choice"
+
+        store WelderChoice
+
+        if(WelderChoice == 1){
+            print"the average salary for a welder is 50,000 a year"
+        }
+        else if(WelderChoice == 2){
+            print "the information for admissions is: "
+            print "ECPI University, #866-744-7617"
+        }
+
+    }
+    else if(trade.equalsIgnoreCase("HVAC")){
+        print "HVAC is a great choice" 
+        
+        print"""
+            Please choose between (1-2)
+            1.Check salary
+            2.Contact admissions
+            """
+        
+        print "please enter choice"
+
+        store hvacChoice
+
+        if(HvacChoice == 1){
+            print " the average salary for a HVAC is $64,000"
+
+        }
+        else if(HvacChoice == 2){
+            print "the information for admissions is"
+            
+            print "Fortis College, #855-367-8471"
+
+        }
+        else{
+            print "sorry that's not an option"
+            exit system
+        }
+    }
+    else if(trade.equalsIgnoreCase("Electrician")){
+        print "electrician is a great choice"
+        print """
+            please choose between (1-2)
+            1.check average salary
+            2.contact admissions
+            """
+        
+        print "please enter choice"
+        
+        store ElectChoice
+
+        if(ElectChoice == 1){
+            print "the average salary for a Electrician is $47,000"
+        }
+        else if(ElectChoice == 2){
+            print "the information for admissions is: "
+            print "ECPI University, #:866-744-7617"
+        }
+
+    }
+    else{
+        print "sorry that's not an option"
+        exit system
+    }
+
+    if(WelderChoice == 1){
+        print "\ninfo from Education planner: "
+        print "Name: " + name
+        print "Age: " + age
+        print "The average Salary for a welder is $50,000 a year."
+        print "-------Have a good day!-------"
+    }
+    else if(WelderChoice == 2){
+        print "\ninfo from Education planner: "
+        print "Name: " + name
+        print "Age: " + age
+        print "The information for admissions is: "
+        print "ECPI University, #:866-744-7617"
+        print "-------Have a good day!-------"
+    }
+    if(HvacChoice == 1){
+        print "\ninfo from Education planner: "
+        print "Name: " + name
+        print "Age: " + age
+        print "The average salary for a HVAC is $64,000 "
+        print "-------Have a good day!-------"
+    }
+    else if(HvacChoice == 2){
+        print "\ninfo from Education planner: "
+        print "Name: " + name
+        print "Age: " + age
+        print "the information for admissions is: "
+        print "Fortis College, #:855-367-8471"
+        print "-------Have a good day!-------"
+    }
+    if(ElectChoice == 1){
+        print "\ninfo from Education planner: "
+        print "Name: " + name
+        print "Age: " + age
+        print "The average salary for a Electrician is $47,000 "
+        print "-------Have a good day!-------"
+    }
+    else if(ElectChoice == 2){
+        print "\ninfo from Education planner: "
+        print "Name: " + name
+        print "Age: " + age
+        print "the information for admissions is: "
+        print "ECPI University, #:866-744-7617"
+        print "-------Have a good day!-------"
+    }
+}
+else if(choice.equalsIgnoreCase("2-year college") || choice.equalsIgnoreCase("2 year college")){
+    print "you selected 2-year College"
+    print "please choose between (1-3)"
+    print """
+        1.Transfer calculator
+        2.Desired major
+        3.Tuition info
+    """
+    print "please enter your choice: "
+    store twoYearChoice
+
+    declare variables
+    AssociatesDegree = 0
+    CCredits = 0
+
+    clear scanner
+
+    if(twoYearChoice == 1){
+        print "we will now calculate the remaining credits need to graduate, please enter current amount of credits"
+        print "Please enter your credit amount: "
+        store CCredits
+        AssociatesDegree = 60 - CCredits
+
+        if(CCredits < 30){
+            print "you need to attend the school for 2 years."
+        }
+        else if(CCredits >= 30){
+            print "you will be graduating within a year!"
+        }
+        print " you are " + AssociatesDegree + " credits from getting an associates degree!"
+        TotalCost = AssociatesDegree * 800
+        print "Total cost for remaining credit hours: " + TotalCost
+
+        print "\ninfo from Education planner: "
+        print "Name: " + name
+        print "Age: " + age
+        if (CCredits <30){
+            print "you will need to stay for the 2 years"
+        }
+        else if (CCredits >= 30){
+            print "you will be graduating within a year!"
+        }
+        print " you are " + AssociatesDegree + " credits from getting an associates degree!"
+        print "your total tuition for your remaining credits are: " + TotalCost
+        print "-------Have a good day!-------"
+    }
+    if(twoYearChoice == 2){
+        print "please enter your desired major!"
+        store major
+        TotalCost = AssociatesDegree * 800
+        print "\ninfo from Education planner: "
+        print "Name: " + name
+        print "Age: " + age
+        print " youre desired major is: " + major
+        print "-------Have a good day!-------"
+    }
+    else if(twoYearChoice == 3){
+        print " you have choosen tuition info"
+        print "\ninfo from Education planner: "
+        print "Name: " + name
+        print "Age: " + age
+        print "the cost per credit hour is 800."
+        print "-------Have a good day!-------"
+    }
+}
+else if(choice.equalsIgnoreCase("4-year college") || choice.equalsIgnoreCase("4 year college")){
+    print "you selected 4-year College"
+    print "please choose between (1-3)"
+    print """
+        1.Cost estimator
+        2.Dorm Selector
+        3.Application checklist
+    """
+    print "Please enter choice below: "
+    store fourYearChoice
+
+    declare variables
+    StateCollege = 0
+    singleDorm = 5000
+    doubleDorm = 8000
+    inState = 0
+    outState = 0
+
+    if(fourYearChoice == 1){
+        clear scanner
+        print " You have choosen Cost Estimator"
+        print "Are you doing in state college or out of state college?: "
+        print """
+            Are you doing in state or out of state college, 
+            1. in State College
+            2. Out of state college
+            Please choose between (1-2)!
+        """
+        print "Please enter below: "
+        store StateCollege
+
+        if(StateCollege == 1){
+            inState = 120 * 600
+            print "You have choosen in state college!"
+            print "\ninfo from Education planner: "
+            print "Name: " + name
+            print "Age: " + age
+            print " total cost for your 4 years is " + inState
+            print "-------Have a good day!-------"
+        }
+        else if(StateCollege == 2){
+            clear scanner
+            outState = 120 * 800
+            print "You have choosen out of state college!"
+            print "\ninfo from Education planner: "
+            print "Name: " + name
+            print "Age: " + age
+            print " total cost for your 4 years is " + outState
+            print "-------Have a good day!-------"
+        }
+        else{
+            print " Sorry that is not a choice!"
+            exit system
+        }
+    }
+    else if(fourYearChoice == 2){
+        clear scanner
+        print " you have choosen Dorm Selector!"
+        print """
+            Please choose from these dorms!
+            1.Single
+            2.Double
+        """
+        print "please enter Dorm choice below!"
+        store Dorm
+        if (Dorm.equalsIgnoreCase("Single")){
+            print "\ninfo from Education planner: "
+            print "Name: " + name
+            print "Age: " + age
+            print "Single dorms cost 5000 for the 4 years"
+            print "-------Have a good day!-------"
+        }
+        else if (Dorm.equalsIgnoreCase("Double")){
+            print "\ninfo from Education planner: "
+            print "Name: " + name
+            print "Age: " + age
+            print "Double dorms cost 8000 for the 4 years"
+            print "-------Have a good day!-------"
+        }
+    }
+    else if(fourYearChoice == 3){
+        print "you have choosen Application checklist!"
+        print """
+            \nlist of required documents below!
+            1.SAT
+            2.Transcript
+            3.Essay
+                """
+        print "\ninfo from Education planner: "
+        print "above is the list of Required documents!"
+        print "Name: " + name
+        print "Age: " + age
+        print "-------Have a good day!-------"
+    }
+}
+else{
+    print " Sorry that is not a choice!"
+    exit system
+}
+END
+
