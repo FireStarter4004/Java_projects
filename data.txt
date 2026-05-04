@@ -1,0 +1,4 @@
+this is the data.txt file
+here is some test data
+1234
+hello everyone
